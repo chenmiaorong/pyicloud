@@ -135,8 +135,8 @@ def download_photos(api, album_name='All Photos', download_dir='/Users/chen/iclo
 def main():
     parser = argparse.ArgumentParser(description='Download photos from iCloud.', argument_default=argparse.SUPPRESS)
     parser.add_argument('--num_photos', type=int, default=None, help='the number of photos to download')
-    parser.add_argument('--email', type=str,  default='502435856@qq.com', help='iCloud email address')
-    parser.add_argument('--password', type=str, default='Alibaba202211', help='iCloud password')
+    parser.add_argument('--email', type=str,  required=True, help='iCloud email address')
+    parser.add_argument('--password', type=str, required=True, help='iCloud password')
     parser.add_argument('--output', type=str, default='./', help='output directory')
     args = parser.parse_args()
 
